@@ -1,0 +1,4 @@
+# Never convert line endings. Every file here is verified by hashing its exact bytes; a checkout
+# that turned \n into \r\n (git's core.autocrlf=true, common on Windows) would make a genuine
+# revealed file fail to match its sealed line.
+* -text
