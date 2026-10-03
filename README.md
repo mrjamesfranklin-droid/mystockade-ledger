@@ -18,6 +18,12 @@ not a recommendation.
   **Strategy rules are never published** — no entry rules, stops, exit rules or hold limits.
 - `verify.py` — checks a revealed file against its commitment.
 
+## Releases
+- `releases.csv` — one line per release: `release,date,rules,rules_removed,sha256_of_rules`. The set of rules
+  changes only on a monthly release day; a rule is retired only on a release day and its sealed record stays.
+  Counts and a hash only — never the rules themselves.
+- Release 1 was revised before its first sealed night; the second row is the rule set in force. 23 rules, 0 retired.
+
 ## How to verify a revealed file
 ```
 python verify.py revealed/2026-09-28_US.json
